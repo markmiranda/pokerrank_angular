@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Helvetica Neue';
+}
+
+a.brand-logo > span {
+  font-weight: bold;
+  color: #C89C00;
+}
+
+a.brand-logo {
+  color: #000;
+}
