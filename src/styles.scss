@@ -11,3 +11,17 @@ a.brand-logo > span {
 a.brand-logo {
   color: #000;
 }
+
+nav ul a {
+  color: #C89C00;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  &:hover {
+    color: #FFF;
+  }
+}
+
+li.active > a {
+  color: #FFF;
+}

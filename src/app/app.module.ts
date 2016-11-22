@@ -10,10 +10,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LandingComponent } from './landing/landing.component';
 import { PlayerLandingComponent } from './player-landing/player-landing.component';
 import { PlayersComponent } from './players/players.component';
+import { GamesComponent } from './games/games.component';
+import { SeasonsComponent } from './seasons/seasons.component';
 
 const routes: Routes = [
-  { path: '', component: LandingComponent },
-  { path: 'players', component: PlayersComponent }
+  { path: 'players', component: PlayersComponent },
+  { path: 'games', component: GamesComponent },
+  { path: 'seasons', component: SeasonsComponent },
+  { path: '', component: LandingComponent }
 ]
 
 @NgModule({
@@ -23,7 +27,9 @@ const routes: Routes = [
     LandingComponent,
     PlayerLandingComponent,
     PlayersComponent,
-    MaterializeDirective
+    GamesComponent,
+    MaterializeDirective,
+    SeasonsComponent
   ],
   imports: [
     BrowserModule,
