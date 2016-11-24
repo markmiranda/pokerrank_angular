@@ -16,6 +16,8 @@ import { PlayersComponent } from './players/players.component';
 import { GamesComponent } from './games/games.component';
 import { SeasonsComponent } from './seasons/seasons.component';
 
+import { PlayerService } from './player.service';
+
 
 const routes: Routes = [
   { path: 'players', component: PlayersComponent },
@@ -41,7 +43,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [PlayerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
