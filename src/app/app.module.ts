@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
-import { MaterializeDirective } from 'angular2-materialize'
+import { MaterializeDirective } from 'angular2-materialize';
+
+import "materialize-css";
+import "angular2-materialize";
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -12,6 +15,7 @@ import { PlayerLandingComponent } from './player-landing/player-landing.componen
 import { PlayersComponent } from './players/players.component';
 import { GamesComponent } from './games/games.component';
 import { SeasonsComponent } from './seasons/seasons.component';
+
 
 const routes: Routes = [
   { path: 'players', component: PlayersComponent },
