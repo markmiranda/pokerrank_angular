@@ -3,25 +3,25 @@ body {
   font-family: 'Helvetica Neue';
 }
 
-a.brand-logo > span {
-  font-weight: bold;
-  color: #C89C00;
-}
-
-a.brand-logo {
+div.container > a.brand-logo {
   color: #000;
-}
-
-nav ul a {
-  color: #C89C00;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  letter-spacing: 1px;
-  &:hover {
-    color: #FFF;
+  & > span {
+    font-weight: bold;
+    color: #C89C00;
   }
 }
 
-li.active > a {
-  color: #FFF;
+ul#nav-mobile > li {
+  &.active > a {
+    color: #EEE;
+  }
+  & > a {
+    color: #C89C00;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    &:hover {
+      color: #FFF;
+    }
+  }
 }
