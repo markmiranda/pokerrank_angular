@@ -1,6 +1,6 @@
 <h2>Players Only</h2>
 <ul>
-      <li *ngFor="let player of players">
-        <span data-id="{{player.id}}">{{player.name}}</span> 
-      </li>
-    </ul>
+  <li *ngFor="let player of players" [routerLink]="['/player', player.id]">
+    <span data-id="{{player.id}}">{{player.name}}</span>
+  </li>
+</ul>

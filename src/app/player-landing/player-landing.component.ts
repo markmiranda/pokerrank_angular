@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Params } from  '@angular/router';
+import { Location } from '@angular/common';
+
+import { PlayerService } from '../player.service';
+import { Player } from '../player';
+
+import 'rxjs/add/operator/switchMap';
+
 
 @Component({
   selector: 'app-player-landing',
@@ -7,9 +15,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerLandingComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  player: Player;
 
-  ngOnInit() {
+  constructor(
+    private playerService: PlayerService,
+    private route: ActivatedRoute,
+    private location: Location
+  ) { }
+
+  ngOnInit(): void {
+    this.route.params
+      .switchMap((params: Params) => this.playerService.getPlayer(+params['id']))
+      .subscribe(player => this.player = player);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

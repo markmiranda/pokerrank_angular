@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'players', component: PlayersComponent },
   { path: 'games', component: GamesComponent },
   { path: 'seasons', component: SeasonsComponent },
+  { path: 'player/:id', component: PlayerLandingComponent },
   { path: '', component: LandingComponent }
 ]
 
