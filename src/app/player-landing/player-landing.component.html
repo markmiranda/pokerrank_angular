@@ -1,3 +1,11 @@
-<p>
-  player-landing works!
-</p>
+<ul class="collection with-header">
+  <li class="collection-header blue-grey lighten-5">
+    <h4>Top 5 Players</h4>
+    <p>By Evaluated Score</p>
+  </li>
+  <li *ngFor="let player of players; let i = index;" class="collection-item avatar">
+    <i class="material-icons circle blue">looks_one</i>
+    <span class="title">{{player.name}}</span>
+    <p>{{player.score}}</p>
+  </li>
+</ul>
