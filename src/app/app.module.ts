@@ -3,10 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
-import { MaterializeDirective } from 'angular2-materialize';
 
-import "materialize-css";
-import "angular2-materialize";
+import { MaterializeModule } from 'angular2-materialize';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -32,13 +30,13 @@ const routes: Routes = [
     PlayerLandingComponent,
     PlayersComponent,
     GamesComponent,
-    MaterializeDirective,
     SeasonsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    MaterializeModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
