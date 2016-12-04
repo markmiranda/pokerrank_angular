@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { PlayerLandingService } from './player-landing.service';
-
 import { Player } from '../player';
 import { PlayerService } from '../player.service';
 
@@ -10,7 +8,7 @@ import { PlayerService } from '../player.service';
   selector: 'app-player-landing',
   templateUrl: './player-landing.component.html',
   styleUrls: ['./player-landing.component.scss'],
-  providers: [PlayerLandingService]
+  providers: [PlayerService]
 })
 export class PlayerLandingComponent implements OnInit {
   players: Player[] =[];

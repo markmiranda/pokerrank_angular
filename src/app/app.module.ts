@@ -11,16 +11,19 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LandingComponent } from './landing/landing.component';
 import { PlayerLandingComponent } from './player-landing/player-landing.component';
 import { PlayersComponent } from './players/players.component';
+import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { GamesComponent } from './games/games.component';
 import { SeasonsComponent } from './seasons/seasons.component';
 
 import { PlayerService } from './player.service';
 
 
+
 const routes: Routes = [
   { path: 'players', component: PlayersComponent },
   { path: 'games', component: GamesComponent },
   { path: 'seasons', component: SeasonsComponent },
+  { path: 'detail/:name', component: PlayerDetailComponent },
   { path: '', component: LandingComponent }
 ]
 
@@ -32,7 +35,8 @@ const routes: Routes = [
     PlayerLandingComponent,
     PlayersComponent,
     GamesComponent,
-    SeasonsComponent
+    SeasonsComponent,
+    PlayerDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,7 @@ const routes: Routes = [
     MaterializeModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [PlayerService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

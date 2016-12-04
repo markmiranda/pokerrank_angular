@@ -8,4 +8,9 @@ export class PlayerService {
   getPlayers(): Promise<Player[]> {
     return Promise.resolve(PLAYERS);
   }
+
+  getPlayer(name: string): Promise<Player> {
+    return this.getPlayers()
+      .then(players => players.find(player => player.name === name))
+  }
 }

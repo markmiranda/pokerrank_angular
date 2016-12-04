@@ -4,8 +4,10 @@
     <p>By Evaluated Score</p>
   </li>
   <li *ngFor="let player of players; let i = index;" class="collection-item avatar">
+    <a [routerLink]="['/detail', player.name]">
     <i class="material-icons circle blue">looks_one</i>
     <span class="title">{{player.name}}</span>
     <p>{{player.score}}</p>
+  </a>
   </li>
 </ul>
