@@ -3,6 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 
 import { PlayerLandingService } from './player-landing.service';
 
+import { Player } from '../player';
+import { PlayerService } from '../player.service';
+
 @Component({
   selector: 'app-player-landing',
   templateUrl: './player-landing.component.html',
@@ -10,18 +13,11 @@ import { PlayerLandingService } from './player-landing.service';
   providers: [PlayerLandingService]
 })
 export class PlayerLandingComponent implements OnInit {
-  private players;
+  players: Player[] =[];
 
-  constructor(private playerLandingService: PlayerLandingService) { }
+  constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
-    this.getPlayers();
+    this.playerService.getPlayers().then(players => this.players = players.slice(1,5));
   }
-
-  getPlayers() {
-    return this.playerLandingService.get().then(players => {
-      this.players = players;
-    });
-  }
-
 }

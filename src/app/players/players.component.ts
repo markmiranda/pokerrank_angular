@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Player } from '../player';
+import { PlayerService } from '../player.service';
+
 @Component({
   selector: 'app-players',
   templateUrl: './players.component.html',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayersComponent implements OnInit {
 
-  constructor() { }
+  players: Player[];
+
+  constructor( private playerService: PlayerService ) { }
 
   ngOnInit() {
+    this.getPlayers();
+  }
+
+  getPlayers() {
+    this.playerService.getPlayers().then( players => this.players = players )
   }
 
 }

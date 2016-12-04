@@ -1,3 +1,21 @@
-<p>
-  players works!
-</p>
+<table class="responsive-table centered highlight">
+  <thead>
+    <tr>
+      <th data-field="Name">Name</th>
+      <th data-field="Games">Attended</th>
+      <th data-field="Score">Score</th>
+      <th data-field="Won">Won</th>
+      <th data-field="Place">Placed</th>
+      <tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of players">
+      <td>{{player.name}}</td>
+      <td>{{player.games}}</td>
+      <td>{{player.score}}</td>
+      <td>{{player.won}}</td>
+      <td>{{player.place}}</td>
+    </tr>
+  </tbody>
+
+</table>
