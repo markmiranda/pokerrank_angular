@@ -1,21 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Player } from '../player';
-import { PlayerService } from '../player.service';
+import { PlayerLandingService } from './player-landing.service';
 
 @Component({
   selector: 'app-player-landing',
   templateUrl: './player-landing.component.html',
   styleUrls: ['./player-landing.component.scss'],
-  providers: [PlayerService]
+  providers: [PlayerLandingService]
 })
 export class PlayerLandingComponent implements OnInit {
-  players: Player[] =[];
+  private players;
 
-  constructor(private playerService: PlayerService) { }
+  constructor(private playerLandingService: PlayerLandingService) { }
 
   ngOnInit() {
-    this.playerService.getPlayers().then(players => this.players = players.slice(0,5));
+    this.getPlayers();
   }
+
+  getPlayers() {
+    return this.playerLandingService.get().then(players => {
+      this.players = players;
+    });
+  }
+
 }

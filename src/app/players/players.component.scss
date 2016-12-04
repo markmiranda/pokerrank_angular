@@ -1,0 +1,16 @@
+a {
+  color: #4078c0;
+  position: relative;
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    height: 1px;
+    left: 0;
+    width: 100%;
+    background: #4078c0;
+    background: linear-gradient(to left, #4078c0);
+  }
+
+}
