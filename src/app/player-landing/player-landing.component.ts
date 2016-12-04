@@ -16,6 +16,6 @@ export class PlayerLandingComponent implements OnInit {
   constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
-    this.playerService.getPlayers().then(players => this.players = players.slice(1,5));
+    this.playerService.getPlayers().then(players => this.players = players.slice(0,5));
   }
 }
