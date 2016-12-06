@@ -11,7 +11,7 @@ import { PlayerLandingService } from './player-landing.service';
 })
 export class PlayerLandingComponent implements OnInit {
   private players;
-
+  
   constructor(private playerLandingService: PlayerLandingService) { }
 
   ngOnInit() {

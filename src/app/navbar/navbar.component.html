@@ -1,7 +1,7 @@
 <nav>
   <div class="nav-wrapper blue-grey lighten-5">
     <div class="container">
-      <a [routerLink]="['']" class="brand-logo"><span>ANGULAR</span>TWO</a>
+      <a [routerLink]="['']" class="brand-logo"><span>POKER</span>RANK</a>
       <a href="#" class="button-collapse" data-activates="mobile-nav" materialize="sideNav"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li [routerLinkActive]="['active']"><a [routerLink]="['/players']">Players</a></li>
@@ -9,9 +9,10 @@
         <li [routerLinkActive]="['active']"><a [routerLink]="['/seasons']">Seasons</a></li>
       </ul>
       <ul id="mobile-nav" class="side-nav">
-        <li [routerLinkActive]="['active']"><a [routerLink]="['/players']">Players</a></li>
-        <li [routerLinkActive]="['active']"><a [routerLink]="['/games']">Games</a></li>
-        <li [routerLinkActive]="['active']"><a [routerLink]="['/seasons']">Seasons</a></li>
+        <li><a [routerLink]="['']">Home</a></li>
+        <li><a [routerLink]="['/players']">Players</a></li>
+        <li><a [routerLink]="['/games']">Games</a></li>
+        <li><a [routerLink]="['/seasons']">Seasons</a></li>
       </ul>
     </div>
   </div>

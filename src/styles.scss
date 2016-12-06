@@ -15,6 +15,10 @@ div.container > a.brand-logo {
   }
 }
 
+.main-container {
+  padding-top: 20px;
+}
+
 ul#nav-mobile > li {
   &.active > a {
     color: #EEE;
@@ -28,4 +32,8 @@ ul#nav-mobile > li {
       color: #FFF;
     }
   }
+}
+
+li.collection-header {
+  color: white;
 }
