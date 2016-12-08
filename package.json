@@ -50,9 +50,5 @@
     "webdriver-manager": "10.2.5"
   },
   "devDependencies": {
-  },
-  "engines": {
-    "node":  "6.6.0",
-    "npm": "3.10.3"
   }
 }
