@@ -1,15 +1,15 @@
 <ul class="collection with-header landing">
-  <li class="collection-header light-blue darken-4">
+  <li class="collection-header blue-grey darken-4">
     <h4>Top 5 Players</h4>
     <p>By Evaluated Score</p>
   </li>
   <li *ngFor="let player of players; let i = index;" class="collection-item avatar">
     <span [ngSwitch]="i">
-      <i *ngSwitchCase=0 class="material-icons circle light-blue darken-3">looks_one</i>
-      <i *ngSwitchCase=1 class="material-icons circle light-blue darken-2">looks_two</i>
-      <i *ngSwitchCase=2 class="material-icons circle light-blue darken-1">looks_3</i>
-      <i *ngSwitchCase=3 class="material-icons circle light-blue">looks_4</i>
-      <i *ngSwitchCase=4 class="material-icons circle light-blue lighten-1">looks_5</i>
+      <i *ngSwitchCase=0 class="material-icons circle blue-grey darken-3">looks_one</i>
+      <i *ngSwitchCase=1 class="material-icons circle blue-grey darken-2">looks_two</i>
+      <i *ngSwitchCase=2 class="material-icons circle blue-grey darken-1">looks_3</i>
+      <i *ngSwitchCase=3 class="material-icons circle blue-grey">looks_4</i>
+      <i *ngSwitchCase=4 class="material-icons circle blue-grey lighten-1">looks_5</i>
     </span>
     <span class="title">{{player.name}}</span>
     <p>{{player.score}} points | {{player.games}} games</p>

@@ -38,6 +38,13 @@ li.collection-header {
   color: white;
 }
 
-ul.landing {
-  border-radius: 7px;
+span.title {
+  color: red;
+  // font-weight: 500;
+}
+
+li.collection-item > a {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
 }
