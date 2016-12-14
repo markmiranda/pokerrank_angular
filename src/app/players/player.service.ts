@@ -6,7 +6,6 @@ import { environment } from '../../environments/environment';
 export class PlayerService {
 
   constructor(private http: Http) {
-
   }
 
   get() {
@@ -14,7 +13,7 @@ export class PlayerService {
       this.http.request(environment.apiEndpoint + '/api/v1/participants')
         .subscribe((res: Response) => {
           var data = res.json();
-          resolve(data)
+          resolve(data);
         });
     });
   }
