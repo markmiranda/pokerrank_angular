@@ -13,6 +13,8 @@ import { PlayerLandingComponent } from './player-landing/player-landing.componen
 import { PlayersComponent } from './players/players.component';
 import { GamesComponent } from './games/games.component';
 import { SeasonsComponent } from './seasons/seasons.component';
+import { GameLandingComponent } from './game-landing/game-landing.component';
+import { SeasonLandingComponent } from './season-landing/season-landing.component';
 
 
 const routes: Routes = [
@@ -30,7 +32,9 @@ const routes: Routes = [
     PlayerLandingComponent,
     PlayersComponent,
     GamesComponent,
-    SeasonsComponent
+    SeasonsComponent,
+    GameLandingComponent,
+    SeasonLandingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<ul class="collection with-header landing">
+  <li class="collection-header teal darken-4">
+    <h4>Seasons</h4>
+    <p>&nbsp;</p>
+  </li>
+  <li *ngFor="let season of seasons; let i = index;" class="collection-item avatar">
+    <span [ngSwitch]="i">
+      <i *ngSwitchCase=0 class="material-icons circle teal darken-3">looks_one</i>
+      <i *ngSwitchCase=1 class="material-icons circle teal darken-2">looks_two</i>
+      <i *ngSwitchCase=2 class="material-icons circle teal darken-1">looks_3</i>
+      <i *ngSwitchCase=3 class="material-icons circle teal">looks_4</i>
+      <i *ngSwitchCase=4 class="material-icons circle teal lighten-1">looks_5</i>
+    </span>
+    <span class="title">{{season.end}}</span>
+    <p># of games: {{season.game_count}}</p>
+    <p>Season Leader: {{season.season_leader}}</p>
+  </li>
+  <li class="collection-item"><a [routerLink]="['/seasons']">VIEW ALL SEASONS</a></li>
+</ul>

@@ -37,3 +37,14 @@ ul#nav-mobile > li {
 li.collection-header {
   color: white;
 }
+
+span.title {
+  color: red;
+  // font-weight: 500;
+}
+
+li.collection-item > a {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+}
