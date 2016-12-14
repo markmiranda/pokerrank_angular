@@ -10,7 +10,7 @@ export class GameLandingService {
 
   get() {
     return new Promise(resolve => {
-      this.http.request(environment.apiEndpoint + '/api/v1/games')
+      this.http.request(environment.apiEndpoint + 'api/v1/games')
         .subscribe((res: Response) => {
           var data = res.json();
           resolve(data.slice(0,5))
