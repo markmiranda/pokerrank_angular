@@ -1,0 +1,19 @@
+<ul class="collection with-header landing">
+  <li class="collection-header cyan darken-4">
+    <h4>Last 5 Games</h4>
+    <p>By Date</p>
+  </li>
+  <li *ngFor="let game of games; let i = index;" class="collection-item avatar">
+    <span [ngSwitch]="i">
+      <i *ngSwitchCase=0 class="material-icons circle cyan darken-3">looks_one</i>
+      <i *ngSwitchCase=1 class="material-icons circle cyan darken-2">looks_two</i>
+      <i *ngSwitchCase=2 class="material-icons circle cyan darken-1">looks_3</i>
+      <i *ngSwitchCase=3 class="material-icons circle cyan">looks_4</i>
+      <i *ngSwitchCase=4 class="material-icons circle cyan lighten-1">looks_5</i>
+    </span>
+    <span class="title">{{game.date}} | {{game.players}} players</span>
+    <p>Winner: {{game.winner}}</p>
+    <p>Runner Up: {{game.runner_up}}</p>
+  </li>
+  <li class="collection-item"><a [routerLink]="['/games']">VIEW ALL GAMES</a></li>
+</ul>
