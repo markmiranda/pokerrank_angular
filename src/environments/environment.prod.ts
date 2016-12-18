@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiEndpoint: 'https://pokerseason.herokuapp.com/'
+  apiEndpoint: 'http://104.131.66.202/'
 };

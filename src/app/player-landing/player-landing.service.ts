@@ -9,12 +9,12 @@ export class PlayerLandingService {
 
   }
 
-  get() {
+  get(slice) {
     return new Promise(resolve => {
       this.http.request(environment.apiEndpoint + 'api/v1/participants')
         .subscribe((res: Response) => {
           var data = res.json();
-          resolve(data.slice(0,5))
+          slice ? resolve(data.slice(0,5)) : resolve(data)  
         });
     });
   }
