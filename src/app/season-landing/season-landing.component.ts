@@ -4,7 +4,6 @@ import { SeasonLandingService } from './season-landing.service';
 @Component({
   selector: 'app-season-landing',
   templateUrl: './season-landing.component.html',
-  styleUrls: ['./season-landing.component.scss'],
   providers: [SeasonLandingService]
 })
 export class SeasonLandingComponent implements OnInit {
@@ -19,7 +18,7 @@ export class SeasonLandingComponent implements OnInit {
   }
 
   getSeasons() {
-    return this.seasonLandingService.get().then(seasons => {
+    return this.seasonLandingService.get(true).then(seasons => {
       this.seasons = seasons;
     });
   }

@@ -6,7 +6,6 @@ import { PlayerLandingService } from './player-landing.service';
 @Component({
   selector: 'app-player-landing',
   templateUrl: './player-landing.component.html',
-  styleUrls: ['./player-landing.component.scss'],
   providers: [PlayerLandingService]
 })
 export class PlayerLandingComponent implements OnInit {

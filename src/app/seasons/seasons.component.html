@@ -1,3 +1,21 @@
-<p>
-  seasons works!
-</p>
+<table class="responsive-table centered striped">
+  <thead>
+    <tr>
+      <th>Beginning of Season</th>
+      <th>End of Season</th>
+      <th>Game Count</th>
+      <th>Cumulative Pot</th>
+      <th>Season Leader</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let season of seasons; let i = index;">
+      <td>{{season.beginning}}</td>
+      <td>{{season.end}}</td>
+      <td>{{season.game_count}}</td>
+      <td>{{season.cumulative_pot}}</td>
+      <td>{{season.season_leader}}</td>
+    </tr>
+  </tbody>
+</table>

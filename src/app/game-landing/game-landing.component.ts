@@ -5,7 +5,6 @@ import { GameLandingService } from './game-landing.service';
 @Component({
   selector: 'app-game-landing',
   templateUrl: './game-landing.component.html',
-  styleUrls: ['./game-landing.component.scss'],
   providers: [GameLandingService]
 })
 export class GameLandingComponent implements OnInit {
@@ -18,7 +17,7 @@ export class GameLandingComponent implements OnInit {
   }
 
   getGames() {
-    return this.gameLandingService.get().then(games =>{
+    return this.gameLandingService.get(true).then(games =>{
       this.games = games;
     });
   }

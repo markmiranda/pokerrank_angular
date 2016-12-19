@@ -8,12 +8,12 @@ export class GameLandingService {
   constructor(private http: Http) {
   }
 
-  get() {
+  get(slice) {
     return new Promise(resolve => {
       this.http.request(environment.apiEndpoint + 'api/v1/games')
         .subscribe((res: Response) => {
           var data = res.json();
-          resolve(data.slice(0,5))
+          slice ? resolve(data.slice(0,5)) : resolve(data)
         });
     });
   }

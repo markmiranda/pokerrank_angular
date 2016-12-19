@@ -1,3 +1,27 @@
-<p>
-  games works!
-</p>
+<table class="responsive-table centered striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Season Number</th>
+      <th>Date</th>
+      <th>Number of Players</th>
+      <th>Buy In</th>
+      <th>Total Pot Size</th>
+      <th>Winner</th>
+      <th>Runner Up</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let game of games; let i = index;">
+      <td>{{i + 1}}</td>
+      <td>{{game.season_number}}</td>
+      <td>{{game.date}}</td>
+      <td>{{game.players}}</td>
+      <td>{{game.buy_in}}</td>
+      <td>{{game.pot_size}}</td>
+      <td>{{game.winner}}</td>
+      <td>{{game.runner_up}}</td>
+    </tr>
+  </tbody>
+</table>
