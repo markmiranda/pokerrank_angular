@@ -9,19 +9,21 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingComponent } from './landing/landing.component';
-import { PlayerLandingComponent } from './player-landing/player-landing.component';
+import { PlayerLandingComponent } from './landing/player-landing.component';
 import { PlayersComponent } from './players/players.component';
 import { GamesComponent } from './games/games.component';
 import { SeasonsComponent } from './seasons/seasons.component';
-import { GameLandingComponent } from './game-landing/game-landing.component';
-import { SeasonLandingComponent } from './season-landing/season-landing.component';
+import { GameLandingComponent } from './landing/game-landing.component';
+import { SeasonLandingComponent } from './landing/season-landing.component';
+import { PlayerComponent } from './players/player.component';
 
 
 const routes: Routes = [
   { path: 'players', component: PlayersComponent },
+  { path: 'players/:id', component: PlayerComponent},
   { path: 'games', component: GamesComponent },
   { path: 'seasons', component: SeasonsComponent },
-  { path: '', component: LandingComponent }
+  { path: '', component: LandingComponent },
 ]
 
 @NgModule({
@@ -34,7 +36,8 @@ const routes: Routes = [
     GamesComponent,
     SeasonsComponent,
     GameLandingComponent,
-    SeasonLandingComponent
+    SeasonLandingComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
