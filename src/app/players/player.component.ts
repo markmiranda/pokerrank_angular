@@ -10,7 +10,7 @@ import { PlayerDetailService } from './player-detail.service';
 })
 export class PlayerComponent implements OnInit {
   id: number;
-  private player;
+  public player;
 
   constructor(
     private playerDetailService: PlayerDetailService,
