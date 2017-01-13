@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { PlayerDetailService } from './player-detail.service';
+import { Player } from './player.model';
 
 @Component({
   selector: 'app-player',
@@ -10,7 +11,7 @@ import { PlayerDetailService } from './player-detail.service';
 })
 export class PlayerComponent implements OnInit {
   id: number;
-  public player;
+  player: Player = {};
 
   constructor(
     private playerDetailService: PlayerDetailService,
