@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { PlayerDetailService } from './player-detail.service';
-import { Player } from './player.model';
 
 @Component({
   selector: 'app-player',
@@ -11,7 +10,7 @@ import { Player } from './player.model';
 })
 export class PlayerComponent implements OnInit {
   id: number;
-  player: Player;
+  public player;
 
   constructor(
     private playerDetailService: PlayerDetailService,
@@ -27,8 +26,8 @@ export class PlayerComponent implements OnInit {
 
   getPlayer(id) {
     return this.playerDetailService.get(id).then(player => {
-      this.player = new Player("Mark");
-
+      this.player = player;
+      console.log(this.player)
     });
   }
 
