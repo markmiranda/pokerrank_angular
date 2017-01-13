@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SeasonLandingService } from '../season-landing/season-landing.service';
+import { SeasonLandingService } from '../landing/season-landing.service';
 
 @Component({
   selector: 'app-seasons',

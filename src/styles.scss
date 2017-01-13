@@ -39,7 +39,7 @@ li.collection-header {
 }
 
 span.title {
-  color: red;
+  color: blue;
   // font-weight: 500;
 }
 
@@ -47,4 +47,8 @@ li.collection-item > a {
   text-transform: uppercase;
   font-size: 0.8em;
   letter-spacing: 1px;
+}
+
+ul.landing {
+  border-radius: 7px;
 }

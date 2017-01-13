@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayerLandingService } from '../player-landing/player-landing.service'
+import { PlayerLandingService } from '../landing/player-landing.service'
 
 @Component({
   selector: 'app-players',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GameLandingService } from '../game-landing/game-landing.service';
+import { GameLandingService } from '../landing/game-landing.service';
 
 @Component({
   selector: 'app-games',
